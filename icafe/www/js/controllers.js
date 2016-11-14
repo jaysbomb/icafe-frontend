@@ -7,7 +7,7 @@ angular.module('starter.controllers', [])
   localStorageService, ngProgressLite, $state, $cordovaBarcodeScanner) {
   $scope.$on('$ionicView.beforeEnter', function() {
     $scope.user = localStorageService.get('user');
-    $http.get("http://localhost:1337/getAdmin/admin@admin.com")
+    $http.get("http://https://icafe-a.herokuapp.com//getAdmin/admin@admin.com")
         .then(function(response){
           // console.log(response.data.table);
           $scope.tableNumber = response.data.table;
@@ -33,7 +33,7 @@ angular.module('starter.controllers', [])
       }else{
         $scope.showAdmin = false;
       }
-      $http.get("http://localhost:1337/getUserCart/" + $scope.user._id )
+      $http.get("https://icafe-a.herokuapp.com//getUserCart/" + $scope.user._id )
         .then(function(response){
           // console.log(response.data.length);
           $scope.cartNumber = response.data.length; 
@@ -50,11 +50,11 @@ angular.module('starter.controllers', [])
     }else{
       $scope.loginOrNot = true;
       $scope.goLogin = "Go Login";
-       $http.get("http://localhost:1337/getAdmin/admin@admin.com")
+       $http.get("https://icafe-a.herokuapp.com//getAdmin/admin@admin.com")
         .then(function(response){
           console.log(response.data.table);
           $scope.tableNumber = response.data.table;
-          $http.get("http://localhost:1337/getTableCart/" + $scope.tableNumber )
+          $http.get("https://icafe-a.herokuapp.com//getTableCart/" + $scope.tableNumber )
           .then(function(response){
             console.log(response.data.length);
             $scope.cartNumber = response.data.length; 
@@ -166,7 +166,7 @@ angular.module('starter.controllers', [])
           }
         });
       }else{
-        $http.get("http://localhost:1337/getAdmin/admin@admin.com")
+        $http.get("https://icafe-a.herokuapp.com//getAdmin/admin@admin.com")
         .then(function(response){
           console.log(response.data.table);
           $scope.tableNumber = response.data.table;
@@ -856,7 +856,7 @@ angular.module('starter.controllers', [])
           }
         });
       }else{
-        $http.get("http://localhost:1337/getAdmin/admin@admin.com")
+        $http.get("https://icafe-a.herokuapp.com//getAdmin/admin@admin.com")
         .then(function(response){
           console.log(response.data.table);
           $scope.tableNumber = response.data.table;
@@ -893,7 +893,7 @@ angular.module('starter.controllers', [])
         }else{
           $scope.username = "User not loggedin";
           $scope.useremail = "User not loggedin";
-          $http.get("http://localhost:1337/getAdmin/admin@admin.com")
+          $http.get("https://icafe-a.herokuapp.com//getAdmin/admin@admin.com")
           .then(function(response){
             // console.log(response.data.table);
             $scope.tableNumber = response.data.table;
@@ -954,7 +954,7 @@ angular.module('starter.controllers', [])
           });
         
       }else{
-        $http.get("http://localhost:1337/getAdmin/admin@admin.com")
+        $http.get("http://https://icafe-a.herokuapp.com//getAdmin/admin@admin.com")
         .then(function(response){
           console.log(response.data.table);
           $scope.tableNumber = response.data.table;

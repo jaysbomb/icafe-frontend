@@ -31,7 +31,7 @@ angular.module('starter', ['ionic', 'starter.controllers',
     });
 
   })
-  .constant('Base_Url', 'http://localhost:1337')
+  .constant('Base_Url', 'https://icafe-a.herokuapp.com/')
 
 
 .config(function($stateProvider, $urlRouterProvider, ngProgressLiteProvider) {
